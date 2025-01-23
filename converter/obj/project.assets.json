@@ -1,11 +1,587 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Microsoft.Database.ManagedEsent/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Esent.Interop.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Esent.Interop.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Xbim.Common/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Xbim.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Xbim.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xbim.Essentials/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Xbim.Common": "6.0.442",
+          "Xbim.IO.Esent": "6.0.442",
+          "Xbim.IO.MemoryModel": "6.0.442",
+          "Xbim.Ifc": "6.0.442",
+          "Xbim.Ifc2x3": "6.0.442",
+          "Xbim.Ifc4": "6.0.442",
+          "Xbim.Ifc4x3": "6.0.442",
+          "Xbim.Tessellator": "6.0.442"
+        }
+      },
+      "Xbim.Ifc/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Xbim.Common": "6.0.442",
+          "Xbim.IO.Esent": "6.0.442",
+          "Xbim.IO.MemoryModel": "6.0.442",
+          "Xbim.Ifc2x3": "6.0.442",
+          "Xbim.Ifc4": "6.0.442"
+        },
+        "compile": {
+          "lib/net6.0/Xbim.Ifc.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Xbim.Ifc.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xbim.Ifc2x3/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Xbim.Common": "6.0.442",
+          "Xbim.Ifc4": "6.0.442"
+        },
+        "compile": {
+          "lib/net6.0/Xbim.Ifc2x3.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Xbim.Ifc2x3.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xbim.Ifc4/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Xbim.Common": "6.0.442"
+        },
+        "compile": {
+          "lib/net6.0/Xbim.Ifc4.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Xbim.Ifc4.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xbim.Ifc4x3/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Xbim.Common": "6.0.442",
+          "Xbim.Ifc4": "6.0.442"
+        },
+        "compile": {
+          "lib/net6.0/Xbim.Ifc4x3.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Xbim.Ifc4x3.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xbim.IO.Esent/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Database.ManagedEsent": "2.0.3",
+          "Xbim.Common": "6.0.442",
+          "Xbim.IO.MemoryModel": "6.0.442"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xbim.IO.Esent.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xbim.IO.Esent.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xbim.IO.MemoryModel/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Xbim.Common": "6.0.442",
+          "Xbim.Ifc2x3": "6.0.442",
+          "Xbim.Ifc4": "6.0.442",
+          "Xbim.Ifc4x3": "6.0.442"
+        },
+        "compile": {
+          "lib/net6.0/Xbim.IO.MemoryModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Xbim.IO.MemoryModel.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xbim.Tessellator/6.0.442": {
+        "type": "package",
+        "dependencies": {
+          "Xbim.Common": "6.0.442",
+          "Xbim.Ifc2x3": "6.0.442",
+          "Xbim.Ifc4": "6.0.442"
+        },
+        "compile": {
+          "lib/net6.0/Xbim.Tessellator.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Xbim.Tessellator.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.Database.ManagedEsent/2.0.3": {
+      "sha512": "liyUzhHNir3ix0VKzeP08VuXDWGSyYQ/6y9lTUX2bhfh/AGs56tpS8Oj08ap+idb4FIZAwDfAbA7uARTj56CmA==",
+      "type": "package",
+      "path": "microsoft.database.managedesent/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Esent.Interop.dll",
+        "lib/netstandard2.0/Esent.Interop.pdb",
+        "lib/netstandard2.0/Esent.Interop.xml",
+        "microsoft.database.managedesent.2.0.3.nupkg.sha512",
+        "microsoft.database.managedesent.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/6.0.0": {
+      "sha512": "k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "sha512": "/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "build/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Xbim.Common/6.0.442": {
+      "sha512": "Frgj6lGKRLnBfA4mQwfOQcn0CpGBLxdpZ23kfCeCsd2FkWsMZyPNxsXKEFnGO5Ia59/9k+CvpxPxrdB0uD4p7A==",
+      "type": "package",
+      "path": "xbim.common/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Xbim.Common.dll",
+        "lib/net6.0/Xbim.Common.pdb",
+        "lib/net6.0/Xbim.Common.xml",
+        "lib/net8.0/Xbim.Common.dll",
+        "lib/net8.0/Xbim.Common.pdb",
+        "lib/net8.0/Xbim.Common.xml",
+        "lib/netstandard2.0/Xbim.Common.dll",
+        "lib/netstandard2.0/Xbim.Common.pdb",
+        "lib/netstandard2.0/Xbim.Common.xml",
+        "lib/netstandard2.1/Xbim.Common.dll",
+        "lib/netstandard2.1/Xbim.Common.pdb",
+        "lib/netstandard2.1/Xbim.Common.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.common.6.0.442.nupkg.sha512",
+        "xbim.common.nuspec"
+      ]
+    },
+    "Xbim.Essentials/6.0.442": {
+      "sha512": "oEpNQLfU72IL8sOEZLmandM5/z8VM/ftzABHnRTj+z8aPI5NJcAsV/mVTS9EToHfIz08UMTWwCxrxnDXMG9ZRg==",
+      "type": "package",
+      "path": "xbim.essentials/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "xbim.essentials.6.0.442.nupkg.sha512",
+        "xbim.essentials.nuspec"
+      ]
+    },
+    "Xbim.Ifc/6.0.442": {
+      "sha512": "QfU579AAtagmpSNd+Bf8LLybWfMNjXM80VpfYj5vESYhKoBq0IOZtQ3leM6ePxdsXwx5JHT2BrKpQmwJ1GX8/A==",
+      "type": "package",
+      "path": "xbim.ifc/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Xbim.Ifc.dll",
+        "lib/net6.0/Xbim.Ifc.pdb",
+        "lib/net6.0/Xbim.Ifc.xml",
+        "lib/net8.0/Xbim.Ifc.dll",
+        "lib/net8.0/Xbim.Ifc.pdb",
+        "lib/net8.0/Xbim.Ifc.xml",
+        "lib/netstandard2.0/Xbim.Ifc.dll",
+        "lib/netstandard2.0/Xbim.Ifc.pdb",
+        "lib/netstandard2.0/Xbim.Ifc.xml",
+        "lib/netstandard2.1/Xbim.Ifc.dll",
+        "lib/netstandard2.1/Xbim.Ifc.pdb",
+        "lib/netstandard2.1/Xbim.Ifc.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.ifc.6.0.442.nupkg.sha512",
+        "xbim.ifc.nuspec"
+      ]
+    },
+    "Xbim.Ifc2x3/6.0.442": {
+      "sha512": "Sc5dNraySbmm4aSSJwyDmJTevSobrbN67vXMrldBZpcycK6NCT5FnknYStLA0QmlXKU5f9MDPpwL9MRr93G1Uw==",
+      "type": "package",
+      "path": "xbim.ifc2x3/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Xbim.Ifc2x3.dll",
+        "lib/net6.0/Xbim.Ifc2x3.pdb",
+        "lib/net6.0/Xbim.Ifc2x3.xml",
+        "lib/net8.0/Xbim.Ifc2x3.dll",
+        "lib/net8.0/Xbim.Ifc2x3.pdb",
+        "lib/net8.0/Xbim.Ifc2x3.xml",
+        "lib/netstandard2.0/Xbim.Ifc2x3.dll",
+        "lib/netstandard2.0/Xbim.Ifc2x3.pdb",
+        "lib/netstandard2.0/Xbim.Ifc2x3.xml",
+        "lib/netstandard2.1/Xbim.Ifc2x3.dll",
+        "lib/netstandard2.1/Xbim.Ifc2x3.pdb",
+        "lib/netstandard2.1/Xbim.Ifc2x3.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.ifc2x3.6.0.442.nupkg.sha512",
+        "xbim.ifc2x3.nuspec"
+      ]
+    },
+    "Xbim.Ifc4/6.0.442": {
+      "sha512": "SsyYmgN8PsFGTzEsQ75GvfGxgUJVTdxUi4htib1tBh6W5jrlbf05liiPCvdf03TvNMHcAluyWzqheCW2aUqupA==",
+      "type": "package",
+      "path": "xbim.ifc4/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Xbim.Ifc4.dll",
+        "lib/net6.0/Xbim.Ifc4.pdb",
+        "lib/net6.0/Xbim.Ifc4.xml",
+        "lib/net8.0/Xbim.Ifc4.dll",
+        "lib/net8.0/Xbim.Ifc4.pdb",
+        "lib/net8.0/Xbim.Ifc4.xml",
+        "lib/netstandard2.0/Xbim.Ifc4.dll",
+        "lib/netstandard2.0/Xbim.Ifc4.pdb",
+        "lib/netstandard2.0/Xbim.Ifc4.xml",
+        "lib/netstandard2.1/Xbim.Ifc4.dll",
+        "lib/netstandard2.1/Xbim.Ifc4.pdb",
+        "lib/netstandard2.1/Xbim.Ifc4.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.ifc4.6.0.442.nupkg.sha512",
+        "xbim.ifc4.nuspec"
+      ]
+    },
+    "Xbim.Ifc4x3/6.0.442": {
+      "sha512": "Cpj0Iq2iW6vI5tFp0r21dKo/R6MWJK7Q0cClScC/7wlljx11fsUsT/NF1yeMmpTh/pAMqEUe64Ggjne0eHOj3Q==",
+      "type": "package",
+      "path": "xbim.ifc4x3/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Xbim.Ifc4x3.dll",
+        "lib/net6.0/Xbim.Ifc4x3.pdb",
+        "lib/net6.0/Xbim.Ifc4x3.xml",
+        "lib/net8.0/Xbim.Ifc4x3.dll",
+        "lib/net8.0/Xbim.Ifc4x3.pdb",
+        "lib/net8.0/Xbim.Ifc4x3.xml",
+        "lib/netstandard2.0/Xbim.Ifc4x3.dll",
+        "lib/netstandard2.0/Xbim.Ifc4x3.pdb",
+        "lib/netstandard2.0/Xbim.Ifc4x3.xml",
+        "lib/netstandard2.1/Xbim.Ifc4x3.dll",
+        "lib/netstandard2.1/Xbim.Ifc4x3.pdb",
+        "lib/netstandard2.1/Xbim.Ifc4x3.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.ifc4x3.6.0.442.nupkg.sha512",
+        "xbim.ifc4x3.nuspec"
+      ]
+    },
+    "Xbim.IO.Esent/6.0.442": {
+      "sha512": "nd3Qcc1f7vXI2fWysGi2u3v0j2ruTUByEPhH5dsAygsTVgzu+Tdxiam9m51wdaYyZU+WZGQzaxsD5G06+2wiDA==",
+      "type": "package",
+      "path": "xbim.io.esent/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Xbim.IO.Esent.dll",
+        "lib/netstandard2.0/Xbim.IO.Esent.pdb",
+        "lib/netstandard2.0/Xbim.IO.Esent.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.io.esent.6.0.442.nupkg.sha512",
+        "xbim.io.esent.nuspec"
+      ]
+    },
+    "Xbim.IO.MemoryModel/6.0.442": {
+      "sha512": "th1337FooA5t1nR5ACbvwdLbjJJmlGzrHZvrTTtTPk5yulGbq3PVdXXQaV4zewpLwkXYQ3x+e394/7JxZXPziA==",
+      "type": "package",
+      "path": "xbim.io.memorymodel/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Xbim.IO.MemoryModel.dll",
+        "lib/net6.0/Xbim.IO.MemoryModel.pdb",
+        "lib/net6.0/Xbim.IO.MemoryModel.xml",
+        "lib/net8.0/Xbim.IO.MemoryModel.dll",
+        "lib/net8.0/Xbim.IO.MemoryModel.pdb",
+        "lib/net8.0/Xbim.IO.MemoryModel.xml",
+        "lib/netstandard2.0/Xbim.IO.MemoryModel.dll",
+        "lib/netstandard2.0/Xbim.IO.MemoryModel.pdb",
+        "lib/netstandard2.0/Xbim.IO.MemoryModel.xml",
+        "lib/netstandard2.1/Xbim.IO.MemoryModel.dll",
+        "lib/netstandard2.1/Xbim.IO.MemoryModel.pdb",
+        "lib/netstandard2.1/Xbim.IO.MemoryModel.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.io.memorymodel.6.0.442.nupkg.sha512",
+        "xbim.io.memorymodel.nuspec"
+      ]
+    },
+    "Xbim.Tessellator/6.0.442": {
+      "sha512": "UfStnYBqn7yX6BCyx5vIbqsizykWgD1rF0vQl+OqOBn4AKIs2hdlgOJTn9vFOev296qKaChRublk2HTypiJTeQ==",
+      "type": "package",
+      "path": "xbim.tessellator/6.0.442",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Xbim.Tessellator.dll",
+        "lib/net6.0/Xbim.Tessellator.pdb",
+        "lib/net6.0/Xbim.Tessellator.xml",
+        "lib/net8.0/Xbim.Tessellator.dll",
+        "lib/net8.0/Xbim.Tessellator.pdb",
+        "lib/net8.0/Xbim.Tessellator.xml",
+        "lib/netstandard2.0/Xbim.Tessellator.dll",
+        "lib/netstandard2.0/Xbim.Tessellator.pdb",
+        "lib/netstandard2.0/Xbim.Tessellator.xml",
+        "lib/netstandard2.1/Xbim.Tessellator.dll",
+        "lib/netstandard2.1/Xbim.Tessellator.pdb",
+        "lib/netstandard2.1/Xbim.Tessellator.xml",
+        "xbim-toolkit-icon.png",
+        "xbim.tessellator.6.0.442.nupkg.sha512",
+        "xbim.tessellator.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Xbim.Essentials >= 6.0.0",
+      "Xbim.Geometry >= 6.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\81806\\.nuget\\packages\\": {}
@@ -13,11 +589,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\IFCtoDWGConverter.csproj",
+      "projectUniqueName": "C:\\Users\\81806\\Documents\\aresifc\\converter\\IFCtoDWGConverter.csproj",
       "projectName": "IFCtoDWGConverter",
-      "projectPath": "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\IFCtoDWGConverter.csproj",
+      "projectPath": "C:\\Users\\81806\\Documents\\aresifc\\converter\\IFCtoDWGConverter.csproj",
       "packagesPath": "C:\\Users\\81806\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\obj\\",
+      "outputPath": "C:\\Users\\81806\\Documents\\aresifc\\converter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\81806\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,6 +626,16 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Xbim.Essentials": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "Xbim.Geometry": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -69,5 +655,26 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "IFCtoDWGConverter は Xbim.Essentials (>= 6.0.0) に依存していますが、Xbim.Essentials 6.0.0 が見つかりませんでした。Xbim.Essentials 6.0.442 の概算の最適な一致が解決されました。",
+      "libraryId": "Xbim.Essentials",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1103",
+      "level": "Error",
+      "message": "バージョン (>= 6.0.0) の安定版パッケージ Xbim.Geometry が見つかりません\r\n  - 55 バージョンが nuget.org に見つかりました。 [ 最も近いバージョン: 6.1.801-netcore ]\r\n  - 0 バージョンが Microsoft Visual Studio Offline Packages に見つかりました",
+      "libraryId": "Xbim.Geometry",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

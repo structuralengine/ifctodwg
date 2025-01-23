@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\IFCtoDWGConverter.csproj": {}
+    "C:\\Users\\81806\\Documents\\aresifc\\converter\\IFCtoDWGConverter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\IFCtoDWGConverter.csproj": {
+    "C:\\Users\\81806\\Documents\\aresifc\\converter\\IFCtoDWGConverter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\IFCtoDWGConverter.csproj",
+        "projectUniqueName": "C:\\Users\\81806\\Documents\\aresifc\\converter\\IFCtoDWGConverter.csproj",
         "projectName": "IFCtoDWGConverter",
-        "projectPath": "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\IFCtoDWGConverter.csproj",
+        "projectPath": "C:\\Users\\81806\\Documents\\aresifc\\converter\\IFCtoDWGConverter.csproj",
         "packagesPath": "C:\\Users\\81806\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\81806\\Documents\\ifctodwg\\converter\\obj\\",
+        "outputPath": "C:\\Users\\81806\\Documents\\aresifc\\converter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\81806\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Xbim.Essentials": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Xbim.Geometry": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
